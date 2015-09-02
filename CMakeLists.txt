@@ -31,6 +31,7 @@ file(GLOB UNIT_SRC_LIST
     ${INC_DIR}/*.h)
 set(TEST_SRC_LIST
     ${UNIT_SRC_LIST}
-    ${SRC_DIR}/Wife.cpp)
+    ${SRC_DIR}/Wife.cpp
+    ${SRC_DIR}/husband.cpp)
 add_executable(unittest ${TEST_SRC_LIST})
 target_link_libraries(unittest gtest gmock pthread)
