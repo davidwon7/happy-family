@@ -16,13 +16,13 @@ public:
     virtual vector<shared_ptr<IEgg>> BuyEggs(shared_ptr<IStore> store, int pieces)
     {
         vector<shared_ptr<IEgg>> eggs;
-        store->ProceedPurchaseEggs(eggs, pieces);
+        // TODO
         return eggs;
     }
     virtual vector<shared_ptr<IMilkCarton>> BuyMilk(shared_ptr<IStore> store, int cartons)
     {
         vector<shared_ptr<IMilkCarton>> milkCartons;
-        store->ProceedPurchaseMilk(milkCartons, cartons);
+        // TODO
         return milkCartons;
     }
 };
@@ -56,24 +56,12 @@ public:
     }
     virtual bool ProceedPurchaseEggs(vector<shared_ptr<IEgg>>& eggs, int quantity)
     {
-        for (int i = 0; i < quantity; ++i)
-        {
-            shared_ptr<IEgg> egg(new Egg());
-            eggs.push_back(egg);
-        }
-        if (eggs.size() > 0)
-            cout << boost::format("%1% of %2% purchased.") % boost::lexical_cast<string>(eggs.size()) % eggs[0]->ToString();
+        // TODO
         return eggs.size() == (size_t)quantity;
     }
     virtual bool ProceedPurchaseMilk(vector<shared_ptr<IMilkCarton>>& milkCartons, int quantity)
     {
-        for (int i = 0; i < quantity; ++i)
-        {
-            shared_ptr<IMilkCarton> milkCarton(new MilkCarton());
-            milkCartons.push_back(milkCarton);
-        }
-        if (milkCartons.size() > 0)
-            cout << boost::format("%1% of %2% purchased.") % boost::lexical_cast<string>(milkCartons.size()) % milkCartons[0]->ToString();
+        // todo
         return milkCartons.size() == (size_t)quantity;
     }
 };
