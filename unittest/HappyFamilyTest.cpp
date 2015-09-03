@@ -29,9 +29,10 @@ TEST_F(HappyFamilyTest, WifeRequestPurchase)
     EXPECT_CALL(*mockHusband, BuyMilk(_, 1)).Times(AtLeast(1)).WillOnce(Return(vector<shared_ptr<IMilkCarton>>(1)));
 
     // act
-    wife.RequestPurchase(mockHusband, mockStore, milkCartons, eggs);
+    bool done = wife.RequestPurchase(mockHusband, mockStore, milkCartons, eggs);
 
     // verify
     EXPECT_EQ(12, eggs.size());
     EXPECT_EQ(1, milkCartons.size());
+    EXPECT_EQ(true, done);
 }
