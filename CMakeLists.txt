@@ -11,6 +11,7 @@ set(3RDPARTY_GTEST_DIR ${3RDPARTY_DIR}/gmock-1.7.0)
 
 # compiler flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} --coverage")
 
 include_directories(${INC_DIR})
 include_directories(${SRC_DIR})
