@@ -1,6 +1,6 @@
 #include "UnitTestMock.h"
 #include "Wife.h"
-#include "husband.h"
+#include "Husband.h"
 
 using namespace std;
 using ::testing::_;

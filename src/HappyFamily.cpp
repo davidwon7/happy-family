@@ -3,7 +3,7 @@
 #include "IMilkCarton.h"
 #include "IEgg.h"
 #include "Wife.h"
-#include "husband.h"
+#include "Husband.h"
 #include <boost/lexical_cast.hpp>
 #include <boost/format.hpp>
 #include <boost/algorithm/string.hpp>
