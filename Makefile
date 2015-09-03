@@ -1,5 +1,5 @@
 default: cmake-debug debug
-jenkins: clean cmake-debug debug test coverage cmake-release release lint chown
+jenkins: clean cmake-debug debug test coverage cmake-release release lint 
 
 cmake-debug:
 	mkdir -p build/debug && \
