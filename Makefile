@@ -1,5 +1,5 @@
 default: cmake-debug debug
-jenkins: clean cmake-debug cmake-release debug release test test-algorithm coverage lint
+jenkins: clean cmake-debug cmake-release debug release test coverage lint
 
 cmake-debug:
 	mkdir -p build/debug && \
@@ -20,10 +20,6 @@ release:
 test:
 	cd build/debug && \
 	./unittest --gtest_output=xml:../../gtest_unittest.xml
-
-test-algorithm:
-	cd build/release && \
-	./happy_family --gtest_output=xml:../../gtest_happy_family.xml
 
 coverage:
 	gcovr -r . -e 3rdparty/ -e src/ -e unittest/ --xml >coverage.xml
