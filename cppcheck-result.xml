@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+  <cppcheck version="1.61"/>
+  <errors>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IHusband.h&quot; not found." verbose="Include file: &quot;IHusband.h&quot; not found.">
+    <location file="src/HappyFamily.cpp" line="1"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IStore.h&quot; not found." verbose="Include file: &quot;IStore.h&quot; not found.">
+    <location file="src/HappyFamily.cpp" line="2"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IMilkCarton.h&quot; not found." verbose="Include file: &quot;IMilkCarton.h&quot; not found.">
+    <location file="src/HappyFamily.cpp" line="3"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IEgg.h&quot; not found." verbose="Include file: &quot;IEgg.h&quot; not found.">
+    <location file="src/HappyFamily.cpp" line="4"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;memory&gt; not found." verbose="Include file: &lt;memory&gt; not found.">
+    <location file="src/Wife.h" line="3"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found." verbose="Include file: &lt;vector&gt; not found.">
+    <location file="src/Wife.h" line="4"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;boost/lexical_cast.hpp&gt; not found." verbose="Include file: &lt;boost/lexical_cast.hpp&gt; not found.">
+    <location file="src/HappyFamily.cpp" line="6"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;boost/format.hpp&gt; not found." verbose="Include file: &lt;boost/format.hpp&gt; not found.">
+    <location file="src/HappyFamily.cpp" line="7"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;boost/algorithm/string.hpp&gt; not found." verbose="Include file: &lt;boost/algorithm/string.hpp&gt; not found.">
+    <location file="src/HappyFamily.cpp" line="8"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found." verbose="Include file: &lt;iostream&gt; not found.">
+    <location file="src/HappyFamily.cpp" line="9"/>
+  </error>
+  <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found." verbose="Include file: &lt;vector&gt; not found.">
+    <location file="src/HappyFamily.cpp" line="10"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IEgg.h&quot; not found." verbose="Include file: &quot;IEgg.h&quot; not found.">
+    <location file="src/Wife.cpp" line="2"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IHusband.h&quot; not found." verbose="Include file: &quot;IHusband.h&quot; not found.">
+    <location file="src/Wife.cpp" line="3"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IMilkCarton.h&quot; not found." verbose="Include file: &quot;IMilkCarton.h&quot; not found.">
+    <location file="src/Wife.cpp" line="4"/>
+  </error>
+  <error id="missingInclude" severity="information" msg="Include file: &quot;IStore.h&quot; not found." verbose="Include file: &quot;IStore.h&quot; not found.">
+    <location file="src/Wife.cpp" line="5"/>
+  </error>
+  </errors>
+</results>

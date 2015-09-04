@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage
+  SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
+<coverage branch-rate="0.5" line-rate="1.0" timestamp="1441351310" version="gcovr 3.2">
+<sources>
+<source>.</source>
+</sources>
+<packages>
+<package branch-rate="0.5" complexity="0.0" line-rate="1.0" name="include">
+<classes>
+<class branch-rate="0.5" complexity="0.0" filename="include/IHusband.h" line-rate="1.0" name="IHusband_h">
+<methods/>
+<lines>
+<line branch="false" hits="1" number="10"/>
+<line branch="true" condition-coverage="50% (1/2)" hits="1" number="13">
+<conditions>
+<condition coverage="50%" number="0" type="jump"/>
+</conditions>
+</line>
+</lines>
+</class>
+<class branch-rate="0.0" complexity="0.0" filename="include/IStore.h" line-rate="1.0" name="IStore_h">
+<methods/>
+<lines>
+<line branch="false" hits="1" number="6"/>
+</lines>
+</class>
+</classes>
+</package>
+</packages>
+</coverage>
+
