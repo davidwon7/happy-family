@@ -1,38 +1,36 @@
 default: cmake-debug debug
-jenkins: clean cmake-debug debug test coverage cmake-release release lint chown
+jenkins: clean cmake-debug cmake-release debug release test coverage lint
 
 cmake-debug:
-    mkdir -p build/debug && \
-    cd build/debug && \
-    cmake -DCMAKE_BUILD_TYPE=Debug ../../
+	mkdir -p build/debug && \
+	cd build/debug && \
+	cmake -DCMAKE_BUILD_TYPE=Debug ../../
 
 cmake-release:
-    mkdir -p build/release && \
-    cd build/release && \
-    cmake -DCMAKE_BUILD_TYPE=Release ../../
+	mkdir -p build/release && \
+	cd build/release && \
+	cmake -DCMAKE_BUILD_TYPE=Release ../../
 
 debug:
-    cd build/debug && $(MAKE)
+	cd build/debug && $(MAKE)
 
 release:
-    cd build/release && $(MAKE)
+	cd build/release && $(MAKE)
 
 test:
-    cd build/debug && \
-    ./unittest --gtest_output=xml:../../gtest_unittest.xml
+	cd build/debug && \
+	./unittest --gtest_output=xml:../../gtest_unittest.xml
 
 coverage:
-    gcovr -r . -e src/ -e unittest/ --xml >coverage.xml
+	gcovr -r . -e 3rdparty/ -e src/ -e unittest/ --xml >coverage.xml
 
 lint:
-    # cppcheck
-    cppcheck -j8 --enable=all --inconclusive --xml --xml-version=2 \
-    -i$(GEN_DIR) \
-    src 2> cppcheck-result.xml
-    # cpplint
-    #find src/ -type d \( -path $(GEN_DIR) \) -prune -o \
-    #-exec sh -c  "python scripts/codestyle/cpp/cpplint/cpplint.py --linelength=120 --counting=detailed --output=vs7 '{}' 1>>cpplint-result.xml 2>>cpplint-result.xml" \;
+	# cppcheck
+	cppcheck --enable=all --check-config --inconclusive --xml --xml-version=2 src 2> cppcheck-result.xml
+	# cpplint
+	#find src/ -type d \( -path $(GEN_DIR) \) -prune -o \
+	#-exec sh -c  "python scripts/codestyle/cpp/cpplint/cpplint.py --linelength=120 --counting=detailed --output=vs7 '{}' 1>>cpplint-result.xml 2>>cpplint-result.xml" \;
 
 clean:
-    rm -rf build/
-    rm *.xml
+	rm -rf build/
+	rm -f *.xml

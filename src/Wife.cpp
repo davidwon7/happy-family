@@ -16,13 +16,19 @@ bool Wife::RequestPurchase(shared_ptr<IHusband> husband, shared_ptr<IStore> stor
         return false;
 
     // TODO
+    int milkToBuy = 1;
+    int eggToBuy = 12;
+    bool mistake = false;
+
     if(store->HasMilk()) {
-        milkCartons = husband->BuyMilk(store, 1);
+        milkCartons = husband->BuyMilk(store, milkToBuy);
     }
 
     if(store->HasEggs()) {
-        eggs = husband->BuyEggs(store, 12);
+        eggs = husband->BuyEggs(store, eggToBuy);
     }
 
-    return milkCartons.size()==1 && eggs.size()==12;
+    mistake = !(milkCartons.size()==milkToBuy && eggs.size()==eggToBuy);
+
+    return mistake;
 }
