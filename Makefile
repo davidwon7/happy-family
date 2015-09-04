@@ -22,13 +22,11 @@ test:
     ./unittest --gtest_output=xml:../../gtest_unittest.xml
 
 coverage:
-    gcovr -r . -e src/ -e unittest/ --xml >coverage.xml
+    gcovr -r . -e 3rdparty/ -e unittest/ --xml >coverage.xml
 
 lint:
     # cppcheck
-    cppcheck -j8 --enable=all --inconclusive --xml --xml-version=2 \
-    -i$(GEN_DIR) \
-    src 2> cppcheck-result.xml
+    cppcheck --enable=all --inconclusive --xml --xml-version=2 src 2> cppcheck-result.xml
     # cpplint
     #find src/ -type d \( -path $(GEN_DIR) \) -prune -o \
     #-exec sh -c  "python scripts/codestyle/cpp/cpplint/cpplint.py --linelength=120 --counting=detailed --output=vs7 '{}' 1>>cpplint-result.xml 2>>cpplint-result.xml" \;
